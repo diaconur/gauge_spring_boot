@@ -1,4 +1,4 @@
-package com.playtika.common.configuration;
+package com.gauge.common.configuration;
 
 import com.thoughtworks.gauge.BeforeSuite;
 import org.springframework.boot.WebApplicationType;

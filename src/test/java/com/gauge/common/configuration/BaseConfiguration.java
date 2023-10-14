@@ -1,6 +1,6 @@
-package com.playtika.common.configuration;
+package com.gauge.common.configuration;
 
-import com.playtika.bonus.configuration.BonusConfiguration;
+import com.gauge.bonus.configuration.BonusConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Import;
 @EnableAutoConfiguration
 @EnableConfigurationProperties
 @Import(BonusConfiguration.class)
-@EnableFeignClients(basePackages = {"com.playtika"})
+@EnableFeignClients(basePackages = {"com.gauge"})
 @EnableEurekaClient
 public class BaseConfiguration {
 

@@ -1,4 +1,4 @@
-package com.playtika.bonus.data;
+package com.gauge.bonus.data;
 
 import lombok.Builder;
 import lombok.Data;

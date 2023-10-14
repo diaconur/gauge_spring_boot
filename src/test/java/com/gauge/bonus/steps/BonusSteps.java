@@ -1,9 +1,9 @@
-package com.playtika.bonus.steps;
+package com.gauge.bonus.steps;
 
-import com.playtika.bonus.client.BonusTestClient;
-import com.playtika.bonus.data.Bonus;
-import com.playtika.bonus.data.BonusRequest;
-import com.playtika.bonus.data.BonusTypes;
+import com.gauge.bonus.client.BonusTestClient;
+import com.gauge.bonus.data.Bonus;
+import com.gauge.bonus.data.BonusRequest;
+import com.gauge.bonus.data.BonusTypes;
 import com.thoughtworks.gauge.Step;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

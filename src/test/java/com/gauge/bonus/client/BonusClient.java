@@ -1,8 +1,8 @@
-package com.playtika.bonus.client;
+package com.gauge.bonus.client;
 
 
-import com.playtika.bonus.data.Bonus;
-import com.playtika.bonus.data.BonusRequest;
+import com.gauge.bonus.data.Bonus;
+import com.gauge.bonus.data.BonusRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

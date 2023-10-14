@@ -1,8 +1,8 @@
-package com.playtika.bonus.configuration;
+package com.gauge.bonus.configuration;
 
-import com.playtika.bonus.client.BonusClient;
-import com.playtika.bonus.client.BonusTestClient;
-import com.playtika.bonus.steps.BonusSteps;
+import com.gauge.bonus.client.BonusClient;
+import com.gauge.bonus.client.BonusTestClient;
+import com.gauge.bonus.steps.BonusSteps;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
