@@ -14,7 +14,7 @@ public class RegisterIOC {
 
     @BeforeSuite
     public void registerIoc() {
-        String environment = new StandardEnvironment().getProperty("environment.name", "");
+        String environment = new StandardEnvironment().getProperty("environment.name", "test");
         context = new SpringApplicationBuilder(BaseConfiguration.class)
                 .web(WebApplicationType.NONE)
                 .profiles(environment)
