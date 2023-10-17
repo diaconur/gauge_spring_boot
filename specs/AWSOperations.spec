@@ -2,6 +2,13 @@ AWS
 ==================
 tags:aws
 
-AWS S3 operations
+AWS operations
 -----------------
-* Create S3 bucket
+* Create new S3 bucket with file and content
+* Create EC2 "T2_MICRO" instance with "UBUNTU_SERVER_2204"
+* Set EC2 "Name" tag with value "my-test-instance"
+
+
+
+----------------------
+* Cleanup S3 content
