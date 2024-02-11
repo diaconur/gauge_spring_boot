@@ -10,9 +10,7 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 @Setter
 public class AWSConfigProperties {
-
     private String region;
     private String accessKey;
     private String secretKey;
-
 }

@@ -29,6 +29,12 @@ public class AWSteps {
         ScenarioContext.setData(fileName, fileName);
     }
 
+    @Step("Create EC2 <instanceType> instance with <imageId>")
+    public void createEc2Instance(String instanceType, String imageId) {
+        String instanceId = ec2TestClient.createEc2Instance(instanceType, imageId);
+        ScenarioContext.setData(TestConstants.EC2_INSTANCEID, instanceId);
+    }
+
     @Step("Cleanup S3 content")
     public void removeS3Objects() {
         String bucketFullName = (String) ScenarioContext.getData(TestConstants.BUCKET_NAME);
@@ -58,12 +64,6 @@ public class AWSteps {
     public void checkInstanceStatus(String status){
         String instanceId = ScenarioContext.getData(TestConstants.EC2_INSTANCEID).toString();
         ec2TestClient.checkInstanceStatus(status, instanceId);
-    }
-
-    @Step("Create EC2 <instanceType> instance with <imageId>")
-    public void createEc2Instance(String instanceType, String imageId) {
-        String instanceId = ec2TestClient.createEc2Instance(instanceType, imageId);
-        ScenarioContext.setData(TestConstants.EC2_INSTANCEID, instanceId);
     }
 
     @Step("Set EC2 <tagKey> tag with value <tagValue>")

@@ -9,7 +9,6 @@ import org.springframework.core.env.StandardEnvironment;
 import static com.thoughtworks.gauge.ClassInstanceManager.setClassInitializer;
 
 public class RegisterIOC {
-
     private ConfigurableApplicationContext context;
 
     @BeforeSuite
@@ -22,5 +21,4 @@ public class RegisterIOC {
 
         setClassInitializer(classToInitialize -> context.getBean(classToInitialize));
     }
-
 }
