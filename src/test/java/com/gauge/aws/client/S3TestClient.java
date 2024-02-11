@@ -1,12 +1,12 @@
 package com.gauge.aws.client;
 
-
 import com.gauge.common.constants.TestConstants;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.*;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -15,7 +15,7 @@ public class S3TestClient {
     private final S3Client s3Client;
 
     public void uploadS3FileAndContent(String bucket, String fileName) {
-        log.info("Starting file upload {} with content {}", fileName, TestConstants.BUCKET_FILE_CONTENT);
+        log.info("Starting file upload {} with content: {}", fileName, TestConstants.BUCKET_FILE_CONTENT);
         s3Client.putObject(PutObjectRequest.builder()
                         .bucket(bucket)
                         .key(fileName)
@@ -47,7 +47,6 @@ public class S3TestClient {
             DeleteObjectRequest deleteObjectRequest = DeleteObjectRequest.builder().bucket(bucketName).key(fileName).build();
             s3Client.deleteObject(deleteObjectRequest);
 
-            log.info("Trying to delete bucket");
             DeleteBucketRequest deleteBucketRequest = DeleteBucketRequest.builder().bucket(bucketName).build();
             s3Client.deleteBucket(deleteBucketRequest);
             log.info("Bucket {} with data {} were deleted!", bucketName, fileName);

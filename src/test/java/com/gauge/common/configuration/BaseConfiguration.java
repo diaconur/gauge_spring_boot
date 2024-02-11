@@ -15,8 +15,8 @@ import org.springframework.context.annotation.Import;
 @Import(AWSConfiguration.class)
 public class BaseConfiguration {
 
-//    @Bean
-//    ScenarioContext scenarioContext(){
-//        return new ScenarioContext();
-//    }
+    @Bean
+    ScenarioContext scenarioContext(){
+        return new ScenarioContext();
+    }
 }

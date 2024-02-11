@@ -3,15 +3,16 @@ package com.gauge.aws.configuration;
 import com.gauge.aws.client.EC2TestClient;
 import com.gauge.aws.client.S3TestClient;
 import com.gauge.common.steps.AWSteps;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
 import software.amazon.awssdk.http.apache.ApacheHttpClient;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.ec2.Ec2Client;
 import software.amazon.awssdk.services.s3.S3Client;
+
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableConfigurationProperties
@@ -40,6 +41,7 @@ public class AWSConfiguration {
     @Bean
     public S3Client s3Client() {
         return S3Client.builder()
+                .forcePathStyle(true)
                 .credentialsProvider(credentials())
                 .region(Region.of(awsConfigProperties().getRegion()))
                 .httpClientBuilder(ApacheHttpClient.builder())

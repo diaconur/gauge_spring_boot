@@ -12,6 +12,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <aws.java.sdk.version>2.21.0</aws.java.sdk.version>
         <lombok.version>1.18.30</lombok.version>
+        <gauge.version>0.10.3</gauge.version>
     </properties>
 
     <parent>
@@ -94,7 +95,7 @@
         <dependency>
             <groupId>com.thoughtworks.gauge</groupId>
             <artifactId>gauge-java</artifactId>
-            <version>0.7.8</version>
+            <version>${gauge.version}</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>

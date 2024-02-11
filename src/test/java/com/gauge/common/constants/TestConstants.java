@@ -7,4 +7,6 @@ public interface TestConstants {
     String BUCKET_FILE = "TestFile";
     String EC2_INSTANCEID = "ec2InstanceId";
 
+    Integer EC2_WAITER_MAX_ATTEMPTS = 30;
+
 }
